@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "rabbit-mq-component": ""
+      "ki4iki4\\rabbit-mq-component\\": ""
     }
   }
 }
