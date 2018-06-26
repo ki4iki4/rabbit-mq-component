@@ -1,0 +1,24 @@
+{
+  "name": "ki4iki4/rabbit-mq-component",
+  "description": "A Yii2 module/component for simple work with RabbitMQ",
+  "type": "yii2-extension",
+  "keywords": ["rabbit","rabbitmq","yii2"],
+  "homepage": "https://github.com/ki4iki4/rabbit-mq-component",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Roman Mamets",
+      "email": "romanmamets@gmail.com",
+      "homepage": "https://github.com/ki4iki4",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php-amqplib/php-amqplib": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "rabbit-mq-component": ""
+    }
+  }
+}
