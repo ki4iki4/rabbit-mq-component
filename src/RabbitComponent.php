@@ -6,7 +6,7 @@
  * Time: 3:15 PM
  */
 
-namespace ki4iki4\rabbitmq;
+namespace ki4iki4\rabbitmq\src;
 
 
 use AMQPChannel;
