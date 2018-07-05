@@ -31,6 +31,7 @@ class RabbitComponent extends Component
     public $user;
     public $pass;
     public $queue;
+    public $args;
     public $vhost;
 
     public function onResponse($rep)
@@ -52,7 +53,9 @@ class RabbitComponent extends Component
             false,
             false,
             true,
-            false
+            false,
+            false,
+            $this->args = []
         );
         $this->channel->basic_consume(
             $this->callback_queue,
@@ -91,7 +94,7 @@ class RabbitComponent extends Component
     public function sendMsg($msg)
     {
         $this->channel = $this->connection->channel();
-        $this->channel->queue_declare($this->queue, false, true, false, false);
+        $this->channel->queue_declare($this->queue, false, true, false, false,false,$this->args = []);
         $msg = new AMQPMessage($msg);
         $this->channel->basic_publish($msg, '', $this->queue);
         $this->channel->close();
