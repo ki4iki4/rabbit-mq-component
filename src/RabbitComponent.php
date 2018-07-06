@@ -79,7 +79,7 @@ class RabbitComponent extends Component
                 'reply_to'       => $this->callback_queue,
             ]
         );
-        $this->channel->basic_publish($msg, '', 'rpc_queue');
+        $this->channel->basic_publish($msg, '', $this->queue);
         while (!$this->response) {
             $this->channel->wait();
         }
